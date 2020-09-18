@@ -2,82 +2,35 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-	<link rel = "stylesheet" type = "text/css" href="styles.css">
-   </head>
+    <title>Dicee</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">  
+</head>
   <body>
-	<div class = "container">
-	<div>
-	<h1>Life Points</h1>
-		<p>Enter each player's starting life points in the box and then press "Start"</p>
-	</div>
 
-	<div id= "coinBox">
-		<button id= "flipCoin">Flip Coin</button>
-		<img id= "coin" class= "Hidden" src = "#" alt = "Coin">
-		<p id= "coinResult" class= "Hidden"></p>
-		
+    <div class="container">
+      <h1 id= "refresh">Press Roll To Play!</h1>
+      <div>
+	<button type="button" class="btn btn-danger btn-lg" onclick = "diceGame()">Roll</button>
 	</div>
-	<div class= "players">
-		<select name="duelist1" id="p1Duelist">
-    			<option value="">--Choose Your Duelist--</option>
-   			<option value="yugi">Yugi</option>
-    			<option value="kaiba">Kaiba</option>
-    			<option value="joey">Joey</option>
-    			<option value="pegasus">Pegasus</option>
-    			<option value="bakura">Bakura</option>
-    			<option value="mai">Mai</option>
-		</select>
-	<br>
-		
-		<div id="p1Image">
-			<p id= "p1Choose" class = "p1Choose">Choose Your Duelist</p>
-			<img id= "p1Pic" class = "Hidden" src = "#" alt = "Select Your Duelist">
-			<p id= "p1Dial" class = "Hidden">#</p>
-		</div>
-		<div class = "p1Box">
-			<p id= "p1Name">Player 1</p>
-			<h2 id= "p1LP">0</h2>
-			<input type="number" id ="player1">
-			<button id= "p1St">Start</button>
-			<button id= "plAdd">Add</button>
-			<button id= "p1Sub">Subtract</button>
-		</div>
+      <div class="dice">
+        <p>Player 1</p>
+        <img id= "img1" class="img1" src="images/dice1.png">
+      </div>
 
-	<br>
-	
-	<br>
-		<select name="duelist2" id="p2Duelist">
-    			<option value="">--Choose Your Duelist--</option>
-   			<option value="yugi">Yugi</option>
-    			<option value="kaiba">Kaiba</option>
-    			<option value="joey">Joey</option>
-    			<option value="pegasus">Pegasus</option>
-    			<option value="bakura">Bakura</option>
-    			<option value="mai">Mai</option>
-		</select>
-	<br>
+      <div class="dice">
+        <p>Player 2</p>
+        <img id= "img2" class="img2" src="images/dice1.png">
+      </div>
 
-		<div id="p2Image">
-			<p id= "p2Choose" class = "p1Choose">Choose Your Duelist</p>
-			<img id= "p2Pic" class = "Hidden" src = "#" alt = "Select Your Duelist">
-			<p id= "p2Dial" class = "Hidden">#</p>
-		</div>
-		<div class = "p2Box">
-			<p id= "p2Name">Player 2</p>
-			<h2 id= "p2LP">0</h2>
-			<input type="number" id ="player2">
-			<button id= "p2St">Start</button>
-			<button id= "p2Add">Add</button>
-			<button id= "p2Sub">Subtract</button>
-		</div>
-	
-	</div>
-	<br>
-	<div>
-	<button id="reset1">Reset</button>
-	</div>
-	</div>
-	<script src = "duelCalc.js"></script>
+    </div>
+
+    <script src="diceGame.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
+	
 
 </html>
